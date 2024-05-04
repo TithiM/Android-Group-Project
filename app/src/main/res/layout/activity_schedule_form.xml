@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".scheduleForm">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD SCHEDULE"
+        android:textSize="30dp"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:layout_margin="25dp"
+        android:textAlignment="center"
+        android:background="#739e05"
+    />
+
+    <EditText
+        android:id="@+id/medName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Medicine Name"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:inputType="text"
+    />
+
+    <EditText
+        android:id="@+id/freq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Frequency"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:inputType="number"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/addTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD TIMES"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:textSize="18dp"
+            android:onClick="addTime"
+            android:background="#739e05"
+        />
+
+        <Button
+            android:id="@+id/addSched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD SCHEDULE"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:textSize="18dp"
+            android:layout_toEndOf="@+id/addTime"
+            android:onClick="addSchedule"
+            android:background="#739e05"
+        />
+
+
+    </RelativeLayout>
+
+<!--    Add Fragment here -->
+
+</LinearLayout>
