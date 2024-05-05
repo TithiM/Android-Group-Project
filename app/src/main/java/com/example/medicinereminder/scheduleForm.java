@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 
 public class scheduleForm extends AppCompatActivity {
 
@@ -21,5 +22,11 @@ public class scheduleForm extends AppCompatActivity {
     public void addTime(View view){
 //        extract values of frequency field
 //        show fragment with "frequency" number of input fields
+        EditText freqEditText = findViewById(R.id.freq);
+
+        int frequency = Integer.parseInt(freqEditText.getText().toString());
+
+        TimeEntryFragment fragment = new TimeEntryFragment(frequency);
+        fragment.show(getSupportFragmentManager(), "time_entry_fragment");
     }
 }
